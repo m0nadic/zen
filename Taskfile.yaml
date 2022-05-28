@@ -1,0 +1,15 @@
+version: '3'
+
+vars:
+  BUILD_DIR: .build
+
+tasks:
+  build:
+    desc: build the executable
+    cmds:
+      - go build -o ./{{.BUILD_DIR}}/zen
+
+  clean:
+    desc: cleans the binary executable files
+    cmds:
+      - rm -rf {{.BUILD_DIR}}
